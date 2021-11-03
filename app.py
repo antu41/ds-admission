@@ -65,10 +65,10 @@ cursor, db = get_database_connection()
 def admin():
     username=st.sidebar.text_input('Username',key='user')
     password=st.sidebar.text_input('Password',type='password',key='pass')
-    st.session_state.login=st.sidebar.button('Login')
+    st.session_state.login=st.sidebar.checkbox('Login')
  
     if st.session_state.login==True:
-        if username=="name" and password=='password':
+        if username=="root" and password=='root':
             st.sidebar.success('Login Success')
 
             date1=st.date_input('Date1')
